@@ -29,5 +29,5 @@ jobs:
         ACCESS_TOKEN: ${{ secrets.TOKEN }}
       run: |
         set -ex
-        git remote set-url origin https://netdefender:${ACCESS_TOKEN}@github.com/netdefender/WebPackPlayGround.git 
+        git remote set-url origin https://NetDefender:${ACCESS_TOKEN}@github.com/NetDefender/WebPackPlayGround.git 
         git push origin `git subtree split --prefix public master`:gh-pages --force
