@@ -4,12 +4,69 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <title>Document</title>
+    <style>
+        .custom-highlight {
+                background-color: rgb(61, 255, 61);
+                text-decoration:dashed;
+            }
+        .hover-highlight {
+            background-color: rgb(255, 251, 0);
+            text-decoration: double;
+            cursor:pointer;
+            border-style: dotted;
+            border-width: 0.1ch;
+        }
+    </style>
 </head>
 <body>
-    <h1>Hello WebPack</h1>
-    <button id="btoEffect">Special Effects</button>
-    <select id="lbProductTypes"></select>
+    <div class="container">
+        <div class="row">
+            <div class="col text-left">
+                <h1 class="display-5"><mark>Highligther</mark> + WebPack</h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <hr>
+            </div>
+        </div>
+
+        <div id="text-content" class="row">
+            <div class="col">
+                <p>
+                    Dijo a la lluvia el viento: «Cuando tú vienes, yo me ausento».
+                    <br>Blancas heladas, detrás las aguas.
+                    <br>A sereno otoño, invierno ventoso.
+                </p>
+                <p>Blancas heladas, detrás las aguas.
+                    <br>Año de nieves, año de vienes.
+                    <br>El sol de verano ablanda la cera y endurece el barro.
+                    <br>Hermano mayor, padre menor.
+                </p>
+                <p>Más ven cuatro ojos que dos.
+                    <br>Al fin y al cabo, por San Juan es el verano.
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <figure class="text-center">
+                    <blockquote class="blockquote">
+                    <p>Este ejemplo se termina.</p>
+                    </blockquote>
+                    <figcaption class="blockquote-footer">
+                    Una persona anónima <cite title="Source Title">Citas Random</cite>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
     <script src="./bundle.js"></script>
 </body>
 </html>
