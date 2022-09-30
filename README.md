@@ -12,7 +12,7 @@ webpack-dev-server webpack-cli
 "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack serve --mode development",
-    "deploy": "webpack --config=webpack.config.js --mode production"
+    "build": "webpack --config=webpack.config.js --mode production"
   },
 ```
 
