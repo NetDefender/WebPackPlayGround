@@ -7,11 +7,13 @@ document.addEventListener('DOMContentLoaded', () => {
 //Clase que controla el comportamiento de la página en cliente. Se tiene que llamar cuando el DOM está cargado
 class Controller {
     #elementHighlighted;
+    #classElementHighlighted;
 
     constructor() {
         this.storage = new HighlightStorage('document/highlight');
+        this.root = document.getElementById('text-content');
         this.highlighter = new Highlighter({
-            $root: document.getElementById('text-content'),
+            $root: this.root,
             style: {
                 className: 'custom-highlight',
             },
@@ -27,6 +29,7 @@ class Controller {
     }
 
     #configureHighlighter() {
+        this.#classElementHighlighted = 'click-highlight';
         //Deserialize
         const existingValue = this.storage.deserialize();
         if(existingValue && Array.isArray(existingValue)) {
@@ -72,6 +75,11 @@ class Controller {
         //console.log(JSON.stringify(this.#elementHighlighted));
         this.idContent.value = this.#elementHighlighted.id;
         this.commentContent.value = this.#elementHighlighted.comment || null;
+
+        const allItems = this.storage.deserialize();
+        allItems.forEach(item => this.highlighter.removeClass(this.#classElementHighlighted, item.id));
+        this.highlighter.addClass(this.#classElementHighlighted, this.#elementHighlighted.id);
+        //click-highlight
     }
 
     #removeHighlightedItem() {
