@@ -20,14 +20,12 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
 
-    - name: Build
-      run: |
-        npm install
-        npm run build
-    - name: Deploy
+    - name: Build and Deploy
       env:
         ACCESS_TOKEN: ${{ secrets.TOKEN }}
       run: |
+        npm install
+        npm run build
         set -ex
         git remote set-url origin https://NetDefender:${ACCESS_TOKEN}@github.com/NetDefender/WebPackPlayGround.git 
-        git push origin `git subtree split --prefix public master`:gh-pages --force
+        git push origin `git subtree split --prefix public master`:gh-pages --force    
