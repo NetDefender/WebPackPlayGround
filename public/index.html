@@ -34,8 +34,8 @@
             </div>
         </div>
 
-        <div id="text-content" class="row">
-            <div class="col">
+        <div class="row">
+            <div class="col" id="text-content">
                 <p>
                     Dijo a la lluvia el viento: «Cuando tú vienes, yo me ausento».
                     <br>Blancas heladas, detrás las aguas.
@@ -49,6 +49,25 @@
                 <p>Más ven cuatro ojos que dos.
                     <br>Al fin y al cabo, por San Juan es el verano.
                 </p>
+            </div>
+            <div class="col">
+                <div class="card shadow-lg bg-white rounded" >
+                    <div class="card-header">
+                        <span class="text-uppercase">Detalle del elemento <mark>resaltado</mark></span>
+                    </div>
+                    <div class="card-body">
+                        <span id="basic-content" class="text-uppercase">Identificador</span>
+                        <input type="text" class="form-control" id="id-content" aria-describedby="basic-content" readonly>
+
+                        <span class="text-uppercase">Comentario</span>
+                        <input type="text" id="comment-content" class="form-control rounded-0" aria-label="Comentario"/>
+
+                        <div class="text-right">
+                            <button id="bto-remove-highlight" class="btn btn-danger mt-3">Eliminar Resaltado</button>
+                            <button id="bto-update-comment" class="btn btn-primary mt-3">Actualizar Comentario</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
