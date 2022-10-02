@@ -11,7 +11,7 @@ webpack-dev-server webpack-cli
 ```json
 "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack serve --mode development",
+    "start": "npm run build && webpack serve --mode development",
     "build": "webpack --config=webpack.config.js --mode production"
   },
 ```
