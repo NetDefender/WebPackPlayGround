@@ -81,6 +81,7 @@ class Controller {
         allItems.forEach(item => this.highlighter.removeClass(this.#classElementHighlighted, item.id));
         this.highlighter.addClass(this.#classElementHighlighted, this.#elementHighlighted.id);
         this.jsonContent.textContent = JSON.stringify(this.#elementHighlighted, null, 2);
+        Prism.highlightElement(this.jsonContent);
     }
 
     #removeHighlightedItem() {
