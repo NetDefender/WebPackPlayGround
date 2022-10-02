@@ -26,6 +26,7 @@ class Controller {
         this.updateComment = document.getElementById('bto-update-comment');
         this.updateComment.addEventListener('click', () => this.#updateComment());
         this.idContent = document.getElementById('id-content');
+        this.jsonContent = document.getElementById('json-content');
     }
 
     #configureHighlighter() {
@@ -79,7 +80,7 @@ class Controller {
         const allItems = this.storage.deserialize();
         allItems.forEach(item => this.highlighter.removeClass(this.#classElementHighlighted, item.id));
         this.highlighter.addClass(this.#classElementHighlighted, this.#elementHighlighted.id);
-        //click-highlight
+        this.jsonContent.textContent = JSON.stringify(this.#elementHighlighted, null, 2);
     }
 
     #removeHighlightedItem() {
